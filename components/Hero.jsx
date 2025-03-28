@@ -57,8 +57,13 @@ export default function Hero() {
     <div className="relative h-[100vh] w-[100vw] text-white">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out"
-        style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+        className="absolute inset-0 bg-center transition-all duration-1000 ease-in-out"
+        style={{
+          backgroundImage: `url(${images[currentImageIndex]})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
       ></div>
 
       {/* Background Overlay */}
