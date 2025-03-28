@@ -34,7 +34,7 @@ export default function Hero() {
   useEffect(() => {
     let interval;
     const duration = 5000; // 5 seconds per image
-    const step = (100 / duration) * 100; 
+    const step = (100 / duration) * 100;
 
     const updateProgress = () => {
       setProgress((prev) => {
@@ -55,31 +55,36 @@ export default function Hero() {
 
   return (
     <div className="relative h-[100vh] w-[100vw] text-white">
-      {/* ✅ Background Image */}
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out"
         style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       ></div>
 
-      {/* ✅ Background Overlay */}
-      <div className="absolute inset-0 bg-white/50"></div>
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-white bg-opacity-40 backdrop-blur-[20px] brightness-100"></div>
 
-      {/* ✅ Centered Logo */}
+      {/* Centered Logo */}
       <div className="absolute inset-0 top-0 flex items-center justify-center">
-        <img src="/assets/Decoris P.svg" alt="logo" className="w-[293.49px]  h-[40px]" />
+        <img
+          src="/assets/Decoris P.svg"
+          alt="logo"
+          className="w-[293.49px]  h-[40px]"
+        />
       </div>
 
       <div className="absolute bottom-0 right-0 p-[50px]">
-        <img src="/assets/Powered by Dominus P.svg" alt="logo" className="w-[122.31px]  h-[30px]" />
+        <img
+          src="/assets/Powered by Dominus P.svg"
+          alt="logo"
+          className="w-[122.31px]  h-[30px]"
+        />
       </div>
-      
 
-      {/* ✅ Footer */}
+      {/* Footer */}
       <div className="absolute bottom-0 w-full text-center text-black py-[50px]">
         COPYRIGHT 2025 DECORIS LIMITED. ALL RIGHTS RESERVED.
       </div>
     </div>
   );
 }
-
-
