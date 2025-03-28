@@ -73,17 +73,17 @@ export default function Hero() {
         />
       </div>
 
-      <div className="absolute bottom-0 right-0 p-[50px]">
+      <div className="absolute bottom-0 right-0 p-[30px] 3xl:p-[50px]">
         <img
           src="/assets/Powered by Dominus P.svg"
           alt="logo"
-          className="w-[122.31px]  h-[30px]"
+          className="w-[122.31px] h-[30px]"
         />
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-0 w-full text-center text-black py-[50px]">
-        COPYRIGHT 2025 DECORIS LIMITED. ALL RIGHTS RESERVED.
+      <div className="absolute bottom-0 w-full text-center text-black py-[30px] 3xl:py-[50px] text-[8px] 3xl:text-[11px] tracking-[3px]">
+        © COPYRIGHT 2025 DECORIS LIMITED. ALL RIGHTS RESERVED.
       </div>
     </div>
   );
