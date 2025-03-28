@@ -8,9 +8,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        base_color: "29003A",
+        danger: "#b00000",
       },
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+        "3xl": "1900px", // 1920
+        "4xl": "2500px", // 2560
+      }
     },
   },
   plugins: [],
