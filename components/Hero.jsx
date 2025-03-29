@@ -1,12 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const [loadedCount, setLoadedCount] = useState(0);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [loadedImages, setLoadedImages] = useState([]);
 
   // Background images
   const images = [
@@ -20,50 +17,30 @@ export default function Hero() {
     "/assets/Images/8.png",
   ];
 
-  // ✅ Preload images when the component mounts
   useEffect(() => {
-    images.forEach((src) => {
+    // Preload images
+    const preloaded = images.map((src) => {
       const img = new Image();
       img.src = src;
-      img.onload = () => setLoadedCount((prev) => prev + 1);
-      img.onerror = () => console.error(`Failed to load: ${src}`);
+      return img;
     });
+
+    setLoadedImages(preloaded);
   }, []);
 
-  // ✅ Start background image slideshow
   useEffect(() => {
-    let interval;
-    const duration = 5000; // 5 seconds per image
-    const step = (100 / duration) * 100;
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
 
-    const updateProgress = () => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-          return 0; // Reset progress
-        }
-        return prev + step;
-      });
-
-      interval = setTimeout(updateProgress, 100);
-    };
-
-    interval = setTimeout(updateProgress, 100);
-
-    return () => clearTimeout(interval);
-  }, [currentImageIndex]);
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   return (
     <div className="relative h-[100vh] w-[100vw] font-style">
-      {/* Background Image */}
       <div
-        className="absolute inset-0 bg-center transition-all duration-1000 ease-in-out"
-        style={{
-          backgroundImage: `url(${images[currentImageIndex]})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
+        className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out"
+        style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       ></div>
 
       {/* Background Overlay */}
@@ -97,3 +74,5 @@ export default function Hero() {
     </div>
   );
 }
+
+

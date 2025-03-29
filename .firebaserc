@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "decoris-d83ed"
-  }
+    "default": "myproject-d70a9",
+    "hosting": "myproject-d70a9"
+  },
+  "targets": {},
+  "etags": {}
 }
