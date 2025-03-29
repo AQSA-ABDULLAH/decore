@@ -37,7 +37,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative max-h-[100vh] w-[100vw] font-style select-none">
+    <div className="relative max-h-screen h-screen w-[100vw] font-style select-none">
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out"
         style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
