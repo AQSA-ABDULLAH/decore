@@ -51,12 +51,12 @@ export default function Hero() {
         <img
           src="/assets/Decoris P.svg"
           alt="logo"
-          className="w-[293.49px]  h-[40px]"
+          className="w-[200px] sm:w-[293.49px]  h-[40px]"
         />
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-[30px] 3xl:bottom-[50px] w-full flex flex-col-reverse gap-[20px] sm:flex-row items-center sm:items-end text-base_color text-[7px] 3xl:text-[10px] tracking-[1.5px]">
+      <div className="absolute bottom-[30px] 3xl:bottom-[50px] w-full flex flex-col-reverse gap-[20px] sm:flex-row items-center sm:items-end text-base_color text-[5px] sm:text-[7px] 3xl:text-[10px] tracking-[1.5px]">
         {/* Centered text for large screens */}
         <div className="w-full text-center sm:w-auto sm:absolute sm:left-1/2 sm:-translate-x-1/2 leading-tight">
           <p>© COPYRIGHT 2025 DECORIS LIMITED. ALL RIGHTS RESERVED.</p>
@@ -67,7 +67,7 @@ export default function Hero() {
           <img
             src="/assets/Powered by Dominus P.svg"
             alt="logo"
-            className="w-[122.31px] h-[30px]"
+            className="w-[90px] sm:w-[122.31px] h-[30px]"
           />
         </div>
       </div>
