@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-white w-screen h-screen overflow-hidden">
+    <div className="bg-white w-screen h-[80vh] sm:h-[100vh] overflow-hidden">
       <Hero />
     </div>
   );
