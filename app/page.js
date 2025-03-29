@@ -1,8 +1,6 @@
 "use client";
-
 import Hero from "@/components/Hero";
 import { useEffect } from "react";
-
 
 export default function Home() {
   useEffect(() => {
@@ -14,9 +12,14 @@ export default function Home() {
     const handleSelectStart = (event) => event.preventDefault();
     document.addEventListener("selectstart", handleSelectStart);
 
+    // Disable image dragging globally
+    const handleDragStart = (event) => event.preventDefault();
+    document.addEventListener("dragstart", handleDragStart);
+
     return () => {
       document.removeEventListener("contextmenu", handleContextMenu);
       document.removeEventListener("selectstart", handleSelectStart);
+      document.removeEventListener("dragstart", handleDragStart);
     };
   }, []);
 
