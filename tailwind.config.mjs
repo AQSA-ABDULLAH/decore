@@ -8,8 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        base_color: "29003A",
+        base_color: "#29003A",
         danger: "#b00000",
+      },
+      fontFamily: {
+        style: ["Microsoft Sans Serif", "sans-serif"], 
       },
       screens: {
         sm: "640px",
@@ -19,8 +22,9 @@ export default {
         "2xl": "1536px",
         "3xl": "1900px", // 1920
         "4xl": "2500px", // 2560
-      }
+      },
     },
   },
   plugins: [],
 };
+
