@@ -37,7 +37,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative h-[100vh] w-[100vw] font-style select-none">
+    <div className="relative max-h-[100vh] w-[100vw] font-style select-none">
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out"
         style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
@@ -58,9 +58,9 @@ export default function Hero() {
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-[30px] 3xl:bottom-[50px] w-full flex flex-col-reverse gap-[20px] sm:flex-row items-center sm:items-end text-base_color text-[5px] sm:text-[7px] 3xl:text-[10px] tracking-[1.5px]">
+      <div className="absolute bottom-0 p-[30px] 3xl:p-[50px] w-full flex flex-col-reverse gap-[20px] sm:flex-row items-center sm:items-end text-base_color text-[5px] sm:text-[7px] 3xl:text-[10px] tracking-[1.5px]">
         {/* Centered text for large screens */}
-        <div className="w-full text-center sm:w-auto sm:absolute sm:left-1/2 sm:-translate-x-1/2 self-end pb-[-1px]">
+        <div className="w-full text-center sm:w-auto sm:absolute sm:left-1/2 sm:-translate-x-1/2 self-end">
           <p>© COPYRIGHT 2025 DECORIS LIMITED. ALL RIGHTS RESERVED.</p>
         </div>
 
@@ -69,7 +69,7 @@ export default function Hero() {
           <img
             src="/assets/Powered by Dominus P.svg"
             alt="logo"
-            className="w-[90px] sm:w-[122.31px] h-[30px]"
+            className="w-[90px] sm:w-[122.31px] h-[28px]"
             draggable="false"
             onDragStart={(e) => e.preventDefault()}
           />
