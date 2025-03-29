@@ -65,7 +65,7 @@ export default function Hero() {
         </div>
 
         {/* Image at the right corner */}
-        <div className="sm:absolute sm:right-[30px] 3xl:right-[50px] p-[0px] sm:pb-[30px] 3xl:pb-[50px]">
+        <div className="sm:absolute sm:right-[30px] 3xl:right-[50px] pb-[10px] sm:pb-[30px] 3xl:pb-[50px]">
           <img
             src="/assets/Powered by Dominus P.svg"
             alt="logo"
