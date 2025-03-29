@@ -60,7 +60,7 @@ export default function Hero() {
       {/* Footer */}
       <div className="absolute bottom-0 w-full flex flex-col-reverse sm:flex-row items-center sm:items-end text-base_color text-[5px] sm:text-[7px] 3xl:text-[10px] tracking-[1.5px]">
         {/* Centered text for large screens */}
-        <div className="w-full text-center sm:w-auto sm:absolute sm:left-1/2 sm:-translate-x-1/2 pb-[28px] 3xl:pb-[48px]">
+        <div className="w-full text-center sm:w-auto sm:absolute sm:left-1/2 sm:-translate-x-1/2 pb-[20px] sm:pb-[28px] 3xl:pb-[48px]">
           <p>© COPYRIGHT 2025 DECORIS LIMITED. ALL RIGHTS RESERVED.</p>
         </div>
 
